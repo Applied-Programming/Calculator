@@ -21,7 +21,7 @@ public class Calculator extends JFrame implements ActionListener {
     JSeparator jp;
     ButtonGroup bg;
     Container cont;
-    JPanel textPanel, syntpanel, buttonpanel;
+    JPanel textPanel, synt_panel, buttonpanel;
 
     Calculator() {
         cont = getContentPane();
@@ -44,8 +44,8 @@ public class Calculator extends JFrame implements ActionListener {
         buttonpanel = new JPanel();
         buttonpanel.setLayout(new GridLayout(5, 4, 2, 2));
         boolean t = true;
-        syntpanel = new JPanel();
-        syntpanel.setLayout(new GridLayout(5, 1));
+        synt_panel = new JPanel();
+        synt_panel.setLayout(new GridLayout(5, 1));
         bar = new JMenuBar();
         view = new JMenu("View");
 
@@ -150,19 +150,19 @@ public class Calculator extends JFrame implements ActionListener {
         eq.addActionListener(this);
 
         sin = new JButton("SIN");
-        syntpanel.add(sin);
+        synt_panel.add(sin);
         sin.addActionListener(this);
         cos = new JButton("COS");
-        syntpanel.add(cos);
+        synt_panel.add(cos);
         cos.addActionListener(this);
         tan = new JButton("TAN");
-        syntpanel.add(tan);
+        synt_panel.add(tan);
         tan.addActionListener(this);
         pow2 = new JButton("x^2");
-        syntpanel.add(pow2);
+        synt_panel.add(pow2);
         pow2.addActionListener(this);
         pow3 = new JButton("x^3");
-        syntpanel.add(pow3);
+        synt_panel.add(pow3);
         pow3.addActionListener(this);
         exp = new JButton("Exp");
         exp.addActionListener(this);
@@ -179,11 +179,11 @@ public class Calculator extends JFrame implements ActionListener {
             String label = button.getText();
             {
                 if (label.equals("Standard")) {
-                    cont.remove(syntpanel);
+                    cont.remove(synt_panel);
                     validate();
                 }
                 if (label.equals("Scientific")) {
-                    cont.add("West", syntpanel);
+                    cont.add("West", synt_panel);
                     validate();
                 }
             }
