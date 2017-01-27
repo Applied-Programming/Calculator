@@ -52,7 +52,7 @@ public class Calculator extends JFrame implements ActionListener {
         standard = new JRadioButtonMenuItem("Standard", true);
         standard.setMnemonic('S');
         standard.addItemListener(new radiohandler());
-        scientific = new JRadioButtonMenuItem("Sceintific");
+        scientific = new JRadioButtonMenuItem("Scientific");
         standard.setMnemonic('c');
         scientific.addItemListener(new radiohandler());
         jp = new JSeparator();
@@ -182,7 +182,7 @@ public class Calculator extends JFrame implements ActionListener {
                     cont.remove(syntpanel);
                     validate();
                 }
-                if (label.equals("Sceintific")) {
+                if (label.equals("Scientific")) {
                     cont.add("West", syntpanel);
                     validate();
                 }
